@@ -1,7 +1,8 @@
-package ships;
+package ships.strategies;
 
 import battlegrounds.BattleGround;
 import players.Player;
+import ships.Ship;
 import validators.ShipPlacementValidatorImpl;
 import validators.ShipPlacementValidator;
 

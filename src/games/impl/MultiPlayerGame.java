@@ -6,7 +6,7 @@ import games.gamestrategies.GameStrategy;
 import missile.missileinitilizer.MissileSequenceInitializer;
 import players.initializers.PlayerInitializer;
 import players.visitors.MultiplayerInitializerVisitor;
-import ships.ShipPlacementStrategy;
+import ships.strategies.ShipPlacementStrategy;
 import ships.initializers.ShipCreationStrategy;
 
 

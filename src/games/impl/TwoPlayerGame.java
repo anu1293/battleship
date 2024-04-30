@@ -8,7 +8,7 @@ import missile.missileinitilizer.MissileSequenceInitializer;
 
 import players.initializers.PlayerInitializer;
 import players.visitors.TwoPlayerInitializerVisitor;
-import ships.ShipPlacementStrategy;
+import ships.strategies.ShipPlacementStrategy;
 import ships.initializers.ShipCreationStrategy;
 
 public class TwoPlayerGame extends AbstractBattleShipGame {

@@ -1,4 +1,4 @@
-package ships;
+package ships.strategies;
 
 import battlegrounds.BattleGround;
 import players.Player;

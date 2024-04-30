@@ -10,7 +10,7 @@ import games.impl.MultiPlayerGame;
 import games.impl.TwoPlayerGame;
 import missile.missileinitilizer.MissileSequenceInitializer;
 import players.initializers.PlayerInitializer;
-import ships.ShipPlacementStrategy;
+import ships.strategies.ShipPlacementStrategy;
 import ships.initializers.ShipCreationStrategy;
 
 public class BattleShipGameFactory {

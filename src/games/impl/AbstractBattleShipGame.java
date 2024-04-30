@@ -8,7 +8,7 @@ import games.gamestrategies.winner.WinnerStrategy;
 import players.Player;
 import players.initializers.PlayerInitializer;
 import players.visitors.PlayerInitializerVisitor;
-import ships.ShipPlacementStrategy;
+import ships.strategies.ShipPlacementStrategy;
 import ships.initializers.ShipCreationStrategy;
 
 public abstract class AbstractBattleShipGame implements BattleShipGame {
