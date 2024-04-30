@@ -1,5 +1,7 @@
 package battlegrounds;
 
+import java.util.ArrayList;
+
 public class RectangularBattleGround extends AbstractBattleGround {
 
     public int getBattleAreaWidth() {
@@ -16,6 +18,7 @@ public class RectangularBattleGround extends AbstractBattleGround {
     public RectangularBattleGround(int height,int width) {
     this.battleAreaHeight = height;
     this.battleAreaWidth = width;
+    ships = new ArrayList<>();
     }
 
 

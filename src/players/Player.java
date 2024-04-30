@@ -14,10 +14,14 @@ public class Player {
     private List<Missile> missileSequence;
     private int remainingShips;
     private List<Ship> ships;
+    private static int idGen;
+    int playerId;
 
     public Player() {
         this.ships = new ArrayList<>();
         this.missileSequence = new ArrayList<>();
+        idGen++;
+        playerId = idGen;
     }
 
     public BattleGround getBattleGround() {
@@ -77,5 +81,27 @@ public class Player {
             }
         }
         return false;
+    }
+
+    public boolean fireMissile() {
+        Missile missile = missileSequence.get(0);
+        if(missile==null)
+            return false;
+        List<Ship> ships = missile.getOpponent().getShips();
+        boolean isHit = false;
+        for (Ship ship : ships) {
+            if (missile.getXCoordinate() >= ship.getxCoordinate() && missile.getXCoordinate() < ship.getxCoordinate() + ship.getWidth() &&
+                    missile.getYCoordinate() >= ship.getyCoordinate() && missile.getYCoordinate() < ship.getyCoordinate() + ship.getHeight()) {
+                ship.markHit(missile.getXCoordinate(), missile.getYCoordinate());
+                isHit = ship.isHit(missile.getXCoordinate(), missile.getYCoordinate());
+                if (isHit && ship.isDestroyed()) {
+                    missile.getOpponent().setRemainingShips(missile.getOpponent().getRemainingShips()-1);
+                }
+                break;
+            }
+        }
+        System.out.println("Player " + (this.playerId) + " fires a missile with target (" + (char)(missile.getXCoordinate()+'A'-1) +","+missile.getYCoordinate()+"): hit: "+isHit);
+        missileSequence.remove(0);
+        return isHit;
     }
 }

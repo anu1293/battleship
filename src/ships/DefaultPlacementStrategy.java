@@ -34,19 +34,18 @@ public class DefaultPlacementStrategy implements ShipPlacementStrategy {
 
             BattleGround battleGround = players[i].getBattleGround();
             int len = ships.size();
-
+            ShipPlacementValidator validator = new ShipPlacementValidatorImpl(battleGround,shipsPlaced);
             for(int j=0;j<len;j++) {
 
                 int x = xCoordinate[i][j];
                 int y= yCoordinate[i][j];
-
-                ShipPlacementValidator validator = new ShipPlacementValidatorImpl(battleGround,shipsPlaced);
 
                 boolean isValidPlacement = validator.isValidPlacement(x,y,ships.get(j).getWidth(),ships.get(j).getHeight());
 
                 if(isValidPlacement) {
                     ships.get(j).setxCoordinate(x);
                     ships.get(j).setyCoordinate(y);
+                    battleGround.addShip(ships.get(i));
                     shipsPlaced.add(ships.get(j));
                 }
             }

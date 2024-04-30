@@ -1,4 +1,4 @@
-package games.gamestrategies.terminalcondition;
+package games.gamestrategies.playerselection;
 
 import players.Player;
 

@@ -6,13 +6,18 @@ import ships.Ship;
 
 public class DisplayBoard {
 
-//    public static void display(Player player) {
-//        RectangularBattleGround groungd = (RectangularBattleGround) player.getBattleGround();
+//    @Override
+//    public void updateBattleground(Player player) {
 //
-//        char[][] displayBoard = new char[ground.get][];
+//    }
 //
-//        for (int i = 0; i < player.getBattleAreaHeight(); i++) {
-//            for (int j = 0; j < player.getBattleAreaWidth(); j++) {
+//    public static void display(Player player, RectangularBattleGround battleGround) {
+//
+//
+//        char[][] displayBoard = new char[player.getBattleGround().getBattleAreaHeight()][battleGround.getBattleAreaWidth()];
+//
+//        for (int i = 0; i < battleGround.getBattleAreaHeight(); i++) {
+//            for (int j = 0; j < battleGround.getBattleAreaWidth(); j++) {
 //                displayBoard[i][j] = '.';
 //            }
 //        }

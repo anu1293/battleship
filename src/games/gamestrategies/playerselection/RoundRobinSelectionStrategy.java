@@ -1,6 +1,5 @@
 package games.gamestrategies.playerselection;
 
-import games.gamestrategies.terminalcondition.PlayerSelectionStrategy;
 import players.Player;
 
 public class RoundRobinSelectionStrategy implements PlayerSelectionStrategy {
